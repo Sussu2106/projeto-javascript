@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas de Carinho</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f8e5;
+    color: #791212;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: #d89090;
+    padding: 15px 0 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(81, 35, 35, 0.5);
+}
+
+header img {
+    height: 75px;
+    width: 80px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.primeiro-titulo {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: large;
+}
+
+.card-header {
+    background-color: #d89090;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.form-group {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-style: oblique;
+}
+
+.btn-primary,
+.btn-secondary {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200;
+    font-style: oblique;
+}
+
+.btn-primary {
+    background-color: #cd6363;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #b8b7a6;
+    border: none;
+}
+
+.table {
+    background-color: white;
+}
+
+.footer {
+    background-color: #791212;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+button {
+    border: #e9ecef;
+    border-radius: 4px;
+    color: #e9ecef;
+    background-color: #791212;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+</style>
+
+<header>
+    <h1 class="text-center mb-4">Cozinha de Afeto</h1>
+    <img src="/imagens/soup_7714659.png">
+</header>
+<div class="container">
+    <div class="card mb-4">
+        <div class="card-header" style="font-family:Josefin Sans, sans-serif; border-radius: 4px";>
+            Este projeto foi idealizado como cantinho especial para compartilhar aquelas receitas que tem um lugar especial em sua vida, lembrando momentos preciosos com pessoas queridas que fizeram parte da sua história familiar.
+        </div>
+    </div>
+<div class="container">
+    <!-- Adicionar Nova Receita -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Adicionar Nova Receita
+        </div>
+        <div class="card-body">
+            <form id="form-adicionar">
+                <div class="form-group">
+                    <label for="nome-receita">Título da receita:</label>
+                    <input type="text" class="form-control" id="nome-receita" required>
+                    <label for="historia-receita">História da receita:</label>
+                    <input type="text" class="form-control" id="historia-receita" required>
+                    <label for="ingredientes-receita">Ingredientes</label>
+                    <input type="text" class="form-control" id="ingredientes" required>
+                    <label for="preparo-receita">Modo de preparo:</label>
+                    <input type="text" class="form-control" id="preparo-receita" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Adicionar Receita</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Editar Receita -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Editar Receita
+        </div>
+        <div class="card-body">
+            <form id="form-editar">
+                <div class="form-group">
+                    <label for="id-receita">ID da Receita:</label>
+                    <input type="text" class="form-control" id="id-receita" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Editar Receita</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mostrar Receita por ID -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Mostrar Receita por ID
+        </div>
+        <div class="card-body">
+            <div id="receita-por-id">
+                <h5>ID da Receita:</h5>
+                <p id="id-receita-mostrar"></p>
+                <h5>Título:</h5>
+                <p id="titulo-receita"></p>
+                <h5>História:</h5>
+                <p id="historia-receita"></p>
+                <h5>Ingredientes:</h5>
+                <p id="ingredientes-receita"></p>
+                <h5>Modo de Preparo:</h5>
+                <p id="modo-receita"></p>
+            </div>
+        </div>
+    </div>
+</div><br><br><br><br>
+
+<!-- Footer -->
+<footer class="footer">
+    &copy; 2024 Cozinha de Afeto. Todos os direitos reservados.<br>
+    Feito por: Suelen Lanna &copysr;
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
