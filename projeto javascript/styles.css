@@ -1,0 +1,107 @@
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f8e5;
+    color: #791212;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: #d89090;
+    padding: 15px 0 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(81, 35, 35, 0.5);
+}
+
+header img {
+    height: 75px;
+    width: 80px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.primeiro-titulo {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: large;
+}
+
+.card-header {
+    background-color: #d89090;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.form-group {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-style: oblique;
+}
+
+.btn-primary,
+.btn-secondary {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200;
+    font-style: oblique;
+}
+
+.btn-primary {
+    background-color: #cd6363;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #b8b7a6;
+    border: none;
+}
+
+.table {
+    background-color: white;
+}
+
+.footer {
+    background-color: #791212;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+button {
+    border: #e9ecef;
+    border-radius: 4px;
+    color: #e9ecef;
+    background-color: #791212;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+</style>
