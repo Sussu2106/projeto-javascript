@@ -1,5 +1,3 @@
-Este é o meu projeto final de Javascript com a Infinty School.
+Este é um dos projetos de Javascript que realizei com a Infinty School.
 
-Neste arquivo montei um site aonde você pode colocar suas receitas que te lembram pessoas e momentos bons!
-
-(está inacabado kkk)_
+Montei um arquivo com HTML/CSS/JavaScript aonde você pode colocar suas receitas que te lembram pessoas e momentos bons!
